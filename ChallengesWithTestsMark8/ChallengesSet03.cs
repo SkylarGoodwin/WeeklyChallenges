@@ -66,7 +66,9 @@ namespace ChallengesWithTestsMark8
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            return (dividend / divisor);
+            if (divisor == 0)
+            { return divisor; }
+               else return (dividend / divisor);
         }
 
         public int LastMinusFirst(int[] nums)
@@ -89,10 +91,10 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            foreach(string word in words)
-            {
-                word.ToUpper();
-            }
+            for (int i = 0;i < words.Length;i++)
+                {
+                    words[i] = words[i].ToUpper();
+                }
         }
     }
 }
